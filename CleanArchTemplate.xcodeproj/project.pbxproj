@@ -23,6 +23,15 @@
 		FF61DB6729C385FD000D9D54 /* DownloadDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB6629C385FD000D9D54 /* DownloadDetailViewModel.swift */; };
 		FF61DB6929C3878E000D9D54 /* DownloadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB6829C3878E000D9D54 /* DownloadListView.swift */; };
 		FF61DB6B29C387AE000D9D54 /* DownloadListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB6A29C387AE000D9D54 /* DownloadListViewModel.swift */; };
+		FF61DB7029C4787F000D9D54 /* SomethingStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB6F29C4787F000D9D54 /* SomethingStoring.swift */; };
+		FF61DB7229C47888000D9D54 /* SomethingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB7129C47888000D9D54 /* SomethingProviding.swift */; };
+		FF61DB7429C478A2000D9D54 /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB7329C478A2000D9D54 /* Something.swift */; };
+		FF61DB7629C478CB000D9D54 /* SomethingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB7529C478CB000D9D54 /* SomethingStorage.swift */; };
+		FF61DB7829C47E7D000D9D54 /* ScanInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB7729C47E7D000D9D54 /* ScanInjection.swift */; };
+		FF61DB7B29C47EAE000D9D54 /* SomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61DB7A29C47EAE000D9D54 /* SomethingView.swift */; };
+		FF84E09229C8A1130008A6B3 /* DownloadTextsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84E09129C8A1130008A6B3 /* DownloadTextsInteractor.swift */; };
+		FF84E09729C8A2F60008A6B3 /* ViewObjektNejaky.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84E09629C8A2F60008A6B3 /* ViewObjektNejaky.swift */; };
+		FF84E09929C8A31A0008A6B3 /* DomainObjektNejaky.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84E09829C8A31A0008A6B3 /* DomainObjektNejaky.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +51,15 @@
 		FF61DB6629C385FD000D9D54 /* DownloadDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailViewModel.swift; sourceTree = "<group>"; };
 		FF61DB6829C3878E000D9D54 /* DownloadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadListView.swift; sourceTree = "<group>"; };
 		FF61DB6A29C387AE000D9D54 /* DownloadListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadListViewModel.swift; sourceTree = "<group>"; };
+		FF61DB6F29C4787F000D9D54 /* SomethingStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingStoring.swift; sourceTree = "<group>"; };
+		FF61DB7129C47888000D9D54 /* SomethingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingProviding.swift; sourceTree = "<group>"; };
+		FF61DB7329C478A2000D9D54 /* Something.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
+		FF61DB7529C478CB000D9D54 /* SomethingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingStorage.swift; sourceTree = "<group>"; };
+		FF61DB7729C47E7D000D9D54 /* ScanInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanInjection.swift; sourceTree = "<group>"; };
+		FF61DB7A29C47EAE000D9D54 /* SomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingView.swift; sourceTree = "<group>"; };
+		FF84E09129C8A1130008A6B3 /* DownloadTextsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTextsInteractor.swift; sourceTree = "<group>"; };
+		FF84E09629C8A2F60008A6B3 /* ViewObjektNejaky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObjektNejaky.swift; sourceTree = "<group>"; };
+		FF84E09829C8A31A0008A6B3 /* DomainObjektNejaky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainObjektNejaky.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +123,10 @@
 		FF61DB4929C38107000D9D54 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
+				FF61DB7929C47EA1000D9D54 /* view */,
+				FF61DB6E29C4784D000D9D54 /* domain */,
+				FF61DB6D29C47847000D9D54 /* data */,
+				FF61DB6C29C47842000D9D54 /* injection */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -126,6 +148,7 @@
 			children = (
 				FF61DB5129C381AD000D9D54 /* DownloadRepository.swift */,
 				FF61DB6029C3834B000D9D54 /* DownloadError.swift */,
+				FF84E09829C8A31A0008A6B3 /* DomainObjektNejaky.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -141,6 +164,7 @@
 		FF61DB4D29C3813E000D9D54 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FF84E09529C8A2E70008A6B3 /* viewObjects */,
 				FF61DB6529C385B6000D9D54 /* downloadList */,
 				FF61DB6429C385A7000D9D54 /* downloadDetail */,
 			);
@@ -151,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				FF61DB4F29C38170000D9D54 /* DownloadImageInteractor.swift */,
+				FF84E09129C8A1130008A6B3 /* DownloadTextsInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -188,6 +213,48 @@
 				FF61DB6A29C387AE000D9D54 /* DownloadListViewModel.swift */,
 			);
 			path = downloadList;
+			sourceTree = "<group>";
+		};
+		FF61DB6C29C47842000D9D54 /* injection */ = {
+			isa = PBXGroup;
+			children = (
+				FF61DB7729C47E7D000D9D54 /* ScanInjection.swift */,
+			);
+			path = injection;
+			sourceTree = "<group>";
+		};
+		FF61DB6D29C47847000D9D54 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FF61DB7529C478CB000D9D54 /* SomethingStorage.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		FF61DB6E29C4784D000D9D54 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				FF61DB6F29C4787F000D9D54 /* SomethingStoring.swift */,
+				FF61DB7129C47888000D9D54 /* SomethingProviding.swift */,
+				FF61DB7329C478A2000D9D54 /* Something.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		FF61DB7929C47EA1000D9D54 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FF61DB7A29C47EAE000D9D54 /* SomethingView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FF84E09529C8A2E70008A6B3 /* viewObjects */ = {
+			isa = PBXGroup;
+			children = (
+				FF84E09629C8A2F60008A6B3 /* ViewObjektNejaky.swift */,
+			);
+			path = viewObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,12 +333,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF61DB7B29C47EAE000D9D54 /* SomethingView.swift in Sources */,
+				FF61DB7829C47E7D000D9D54 /* ScanInjection.swift in Sources */,
+				FF61DB7229C47888000D9D54 /* SomethingProviding.swift in Sources */,
 				FF61DB6729C385FD000D9D54 /* DownloadDetailViewModel.swift in Sources */,
+				FF61DB7629C478CB000D9D54 /* SomethingStorage.swift in Sources */,
 				FF61DB5829C381EC000D9D54 /* Resolver.swift in Sources */,
 				FF61DB5F29C3824C000D9D54 /* DownloadRepositoryImpl.swift in Sources */,
 				FF61DB5029C38170000D9D54 /* DownloadImageInteractor.swift in Sources */,
+				FF84E09929C8A31A0008A6B3 /* DomainObjektNejaky.swift in Sources */,
+				FF84E09729C8A2F60008A6B3 /* ViewObjektNejaky.swift in Sources */,
 				FF61DB5A29C381F0000D9D54 /* Inject.swift in Sources */,
+				FF61DB7029C4787F000D9D54 /* SomethingStoring.swift in Sources */,
 				FF61DB6329C38587000D9D54 /* DownloadDetailView.swift in Sources */,
+				FF61DB7429C478A2000D9D54 /* Something.swift in Sources */,
 				FF15501A29C3809C00CF6732 /* ContentView.swift in Sources */,
 				FF61DB6129C3834B000D9D54 /* DownloadError.swift in Sources */,
 				FF61DB6929C3878E000D9D54 /* DownloadListView.swift in Sources */,
@@ -279,6 +354,7 @@
 				FF61DB6B29C387AE000D9D54 /* DownloadListViewModel.swift in Sources */,
 				FF61DB5229C381AD000D9D54 /* DownloadRepository.swift in Sources */,
 				FF61DB5D29C38228000D9D54 /* DownloadInjection.swift in Sources */,
+				FF84E09229C8A1130008A6B3 /* DownloadTextsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

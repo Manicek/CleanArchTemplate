@@ -22,3 +22,14 @@ class Resolver {
         container.resolve(T.self)!
     }
 }
+
+// MARK: - Swinject.Resolver extension
+
+extension Swinject.Resolver {
+    func resolve<Service>(_ serviceType: Service.Type) -> Service {
+        guard let service = resolve(serviceType) else {
+            fatalError("Failed to resolver service: \(serviceType)")
+        }
+        return service
+    }
+}

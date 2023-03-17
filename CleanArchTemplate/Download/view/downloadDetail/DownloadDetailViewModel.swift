@@ -8,7 +8,7 @@
 import Foundation
 
 class DownloadDetailViewModel: ObservableObject {
-    @Inject private var downloadImageInteractor: DownloadImageInteractor
+    @Inject private var downloadImage: DownloadImageInteractor
     
     @Published var identifier = ""
     @Published var imageData: Data?
@@ -17,7 +17,7 @@ class DownloadDetailViewModel: ObservableObject {
     
     func download() {
         do {
-            imageData = try downloadImageInteractor(identifier)
+            imageData = try downloadImage(identifier)
         } catch {
             print("Failed to download data")
             shouldDisplayError = true
