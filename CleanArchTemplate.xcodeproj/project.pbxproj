@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0EAD7C29D05AF9005BBEB1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AE0EAD7B29D05AF9005BBEB1 /* ComposableArchitecture */; };
+		AE0EAD7F29D06724005BBEB1 /* DownloadListViewFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EAD7E29D06724005BBEB1 /* DownloadListViewFeature.swift */; };
+		AE0EAD8129D0675F005BBEB1 /* DownloadDetailViewFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EAD8029D0675F005BBEB1 /* DownloadDetailViewFeature.swift */; };
 		FF15501829C3809C00CF6732 /* CleanArchTemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15501729C3809C00CF6732 /* CleanArchTemplateApp.swift */; };
 		FF15501A29C3809C00CF6732 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15501929C3809C00CF6732 /* ContentView.swift */; };
 		FF15501C29C3809D00CF6732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF15501B29C3809D00CF6732 /* Assets.xcassets */; };
@@ -35,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE0EAD7E29D06724005BBEB1 /* DownloadListViewFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadListViewFeature.swift; sourceTree = "<group>"; };
+		AE0EAD8029D0675F005BBEB1 /* DownloadDetailViewFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailViewFeature.swift; sourceTree = "<group>"; };
 		FF15501429C3809C00CF6732 /* CleanArchTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF15501729C3809C00CF6732 /* CleanArchTemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchTemplateApp.swift; sourceTree = "<group>"; };
 		FF15501929C3809C00CF6732 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0EAD7C29D05AF9005BBEB1 /* ComposableArchitecture in Frameworks */,
 				FF61DB5529C381D4000D9D54 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE0EAD7D29D0670B005BBEB1 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				AE0EAD7E29D06724005BBEB1 /* DownloadListViewFeature.swift */,
+				AE0EAD8029D0675F005BBEB1 /* DownloadDetailViewFeature.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
 		FF15500B29C3809C00CF6732 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +108,7 @@
 		FF15501629C3809C00CF6732 /* CleanArchTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AE0EAD7D29D0670B005BBEB1 /* Reducer */,
 				FF61DB5629C381E4000D9D54 /* Injection */,
 				FF61DB4A29C38110000D9D54 /* Download */,
 				FF61DB4929C38107000D9D54 /* Scan */,
@@ -275,6 +291,7 @@
 			name = CleanArchTemplate;
 			packageProductDependencies = (
 				FF61DB5429C381D4000D9D54 /* Swinject */,
+				AE0EAD7B29D05AF9005BBEB1 /* ComposableArchitecture */,
 			);
 			productName = CleanArchTemplate;
 			productReference = FF15501429C3809C00CF6732 /* CleanArchTemplate.app */;
@@ -306,6 +323,7 @@
 			mainGroup = FF15500B29C3809C00CF6732;
 			packageReferences = (
 				FF61DB5329C381D4000D9D54 /* XCRemoteSwiftPackageReference "Swinject" */,
+				AE0EAD7A29D05AF9005BBEB1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = FF15501529C3809C00CF6732 /* Products */;
 			projectDirPath = "";
@@ -337,6 +355,7 @@
 				FF61DB7829C47E7D000D9D54 /* ScanInjection.swift in Sources */,
 				FF61DB7229C47888000D9D54 /* SomethingProviding.swift in Sources */,
 				FF61DB6729C385FD000D9D54 /* DownloadDetailViewModel.swift in Sources */,
+				AE0EAD8129D0675F005BBEB1 /* DownloadDetailViewFeature.swift in Sources */,
 				FF61DB7629C478CB000D9D54 /* SomethingStorage.swift in Sources */,
 				FF61DB5829C381EC000D9D54 /* Resolver.swift in Sources */,
 				FF61DB5F29C3824C000D9D54 /* DownloadRepositoryImpl.swift in Sources */,
@@ -348,6 +367,7 @@
 				FF61DB6329C38587000D9D54 /* DownloadDetailView.swift in Sources */,
 				FF61DB7429C478A2000D9D54 /* Something.swift in Sources */,
 				FF15501A29C3809C00CF6732 /* ContentView.swift in Sources */,
+				AE0EAD7F29D06724005BBEB1 /* DownloadListViewFeature.swift in Sources */,
 				FF61DB6129C3834B000D9D54 /* DownloadError.swift in Sources */,
 				FF61DB6929C3878E000D9D54 /* DownloadListView.swift in Sources */,
 				FF15501829C3809C00CF6732 /* CleanArchTemplateApp.swift in Sources */,
@@ -557,6 +577,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE0EAD7A29D05AF9005BBEB1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 		FF61DB5329C381D4000D9D54 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -568,6 +596,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE0EAD7B29D05AF9005BBEB1 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE0EAD7A29D05AF9005BBEB1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		FF61DB5429C381D4000D9D54 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FF61DB5329C381D4000D9D54 /* XCRemoteSwiftPackageReference "Swinject" */;

@@ -6,25 +6,37 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct DownloadDetailView: View {
-    @StateObject var viewModel: DownloadDetailViewModel
-    
+    let store: StoreOf<DownloadDetailViewFeature>
+
     var body: some View {
-        VStack(alignment: .center) {
-            TextField("Identifier", text: $viewModel.identifier)
-            
-            Button {
-                viewModel.download()
-            } label: {
-                Text("Download")
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            VStack(alignment: .center) {
+                TextField("Identifier", text: viewStore.binding(\.$identifier))
+                
+                Button {
+                    viewStore.send(.downloadTapped)
+                } label: {
+                    Text("Download")
+                }
+                
+                Button {
+                    viewStore.send(.increaseSomething)
+                } label: {
+                    Text("\(viewStore.state.something)")
+                }
             }
-            
-            Button {
-                viewModel.increaseSomething()
-            } label: {
-                Text("\(viewModel.something)")
+            .padding(20)
+            .alert("Error", isPresented: viewStore.binding(\.$shouldDisplayError)) {
+                Button("OK") {}
+                Button("Retry") {
+                    viewStore.send(.downloadTapped)
+                }
+            } message: {
+                Text("There was an error when downloading the image")
             }
-        }.padding(20)
+        }
     }
 }

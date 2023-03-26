@@ -12,11 +12,18 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationLink("List") {
-                    DownloadListView()
+                    DownloadListView(store: .init(initialState: .init(), reducer: DownloadListViewFeature()))
                 }
                 
                 NavigationLink("Detail") {
-                    DownloadDetailView(viewModel: DownloadDetailViewModel())
+                    DownloadDetailView(
+                        store: .init(
+                            initialState: .init(),
+                            reducer: DownloadDetailViewFeature(
+                                downloadImage: DownloadImageInteractor()
+                            )
+                        )
+                    )
                 }
             }
         }
