@@ -14,6 +14,7 @@ struct DownloadDetailViewFeature: ReducerProtocol {
         var imageData: Data?
         @BindingState var shouldDisplayError = false
         var something = 0
+        var loadingsCounter = 0
     }
     
     enum Action: Equatable, BindableAction {
@@ -33,6 +34,7 @@ struct DownloadDetailViewFeature: ReducerProtocol {
                 state.something += 1
                 return .none
             case .downloadTapped:
+                state.loadingsCounter += 1
                 return .task { [identifier = state.identifier] in
                     await .downloadResult(
                         TaskResult {
@@ -41,14 +43,16 @@ struct DownloadDetailViewFeature: ReducerProtocol {
                     )
                 }
             case .downloadResult(.success(let data)):
+                state.loadingsCounter -= 1
                 state.imageData = data
                 return .none
             case .downloadResult(.failure(_)):
+                state.loadingsCounter -= 1
                 state.shouldDisplayError = true
                 return .none
             case .binding(_):
                 return .none
             }
-        }
+        }._printChanges()
     }
 }
